@@ -30,15 +30,15 @@ candidateName = String(inputName.question("Please enter your full name: "));
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
- //Original code:
-//  const input2 = require('readline-sync');
-// candidateAnswer = String((input2.question(questions[0])));
-// console.log(candidateAnswer)
+  //Original code:
+  //  const input2 = require('readline-sync');
+  // candidateAnswer = String((input2.question(questions[0])));
+  // console.log(candidateAnswer)
 
 const inputAnswer = require('readline-sync');
-// ask a different question each time 
+  // ask a different question each time 
   for (let i = 0; i < questions.length; i++) {
-  // save the answer of that question to a variable
+    // save the answer of that question to a variable
   
   let catchAnswer = String((inputAnswer.question(questions[i])));
   //console.log(catchAnswer);
@@ -51,7 +51,8 @@ const inputAnswer = require('readline-sync');
     correctCandidateAnswers.push(catchAnswer);
    
     } else {
-    console.log(`Incorrect answer!\n`); 
+    console.log(`Incorrect answer!`); 
+    console.log(`The correct answer was ${correctAnswers[i]} \n`)
     }
     
    }
@@ -66,31 +67,19 @@ console.log("You answered " + (correctCandidateAnswers.length) + " out of " +(qu
 
 
   if (grade >= 80) {
-    console.log(`You passed the test with a score of ${grade} percent.`);
+  console.log(`You passed the test with a score of ${grade} percent.`);
     
   } else {
     console.log("You did not pass the test.");
   }
 
-
-// INSTRUCTIONS:
-// Compare the candidate answers with the correct answers,
-// Calculate the candidate's score as a percentage,
-// Convey to the candidate if they have passed the quiz with an 80% or if they have failed.
-
-
-// Some tips:
-// Checking for the correct answer should be case insensitive (e.g. "Orbit" is the same as "orbit").
-// Somewhere below TODO 1.2c you should see a variable declaration for grade. Use this to calculate the candidate's score.
-// To calculate the candidate's percentage, use the equation:
-
-  return grade;
+//return grade;
 }
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
+
   console.log("Welcome, " + candidateName + `!  Good Luck!\n`);
 
   askQuestion();
