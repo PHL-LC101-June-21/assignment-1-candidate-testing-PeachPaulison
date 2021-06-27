@@ -1,4 +1,10 @@
-// I'll continue to work on it.// 
+console.log("************************************************************");
+console.log("************************************************************");
+console.log("**                       Welcome to                       **");
+console.log("**                   Candidate Testing!                   **");
+  
+console.log("************************************************************");
+console.log(`************************************************************\n`);
 
 const input = require('readline-sync');
 
@@ -9,7 +15,7 @@ let candidateName = ("");
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 
 
-let questions = ["Who was the first American woman in space? ", "True or False: 5 kilometers == 5000 meters? ", "(5 + 3)/ 2 * 10 = ", "Given the array [8, 'Orbit', 'Trajectory', 45] what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
+let questions = ["Who was the first American woman in space? ", "True or False: 5 kilometers == 5000 meters? ", "(5 + 3)/ 2 * 10 = ", `Given the array [8, 'Orbit', 'Trajectory', 45]\nwhat entry is at index 2? `, "What is the minimum crew size for the ISS? "];
 
 let correctAnswers = ["Sally Ride", "True", "40", "Trajectory", "3"];
 
@@ -52,27 +58,29 @@ const inputAnswer = require('readline-sync');
    
     } else {
     console.log(`Incorrect answer!`); 
-    console.log(`The correct answer was ${correctAnswers[i]} \n`)
-    }
-    
+    console.log(`The correct answer was ${correctAnswers[i]}. \n`)
    }
+  }
 }
 
 
 function gradeQuiz(candidateAnswers) {
 
 let grade = Number((correctCandidateAnswers.length / questions.length) * 100);
-
-console.log("You answered " + (correctCandidateAnswers.length) + " out of " +(questions.length) + " questions correctly." );
+console.log("************************************************************");
+console.log("************************************************************");
+console.log("**      You answered " + (correctCandidateAnswers.length) + " out of " +(questions.length) + " questions correctly.      **" );
 
 
   if (grade >= 80) {
-  console.log(`You passed the test with a score of ${grade} percent.`);
+  console.log(`**         You passed with a score of ${grade} percent.         **`);
     
   } else {
-    console.log("You did not pass the test.");
-  }
+    console.log("**               You did not pass the test.               **");
 
+  }
+console.log("************************************************************");
+console.log("************************************************************");
 //return grade;
 }
 
