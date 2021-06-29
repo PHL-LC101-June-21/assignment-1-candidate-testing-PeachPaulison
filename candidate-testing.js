@@ -72,6 +72,7 @@ console.log("************************************************************");
 console.log("**      You answered " + (correctCandidateAnswers.length) + " out of " +(questions.length) + " questions correctly.      **" );
 
 
+
   if (grade >= 80) {
   console.log(`**         You passed with a score of ${grade} percent.         **`);
     
@@ -81,7 +82,7 @@ console.log("**      You answered " + (correctCandidateAnswers.length) + " out o
   }
 console.log("************************************************************");
 console.log("************************************************************");
-//return grade;
+return grade;
 }
 
 function runProgram() {
